@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+img {
+  display: block;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.gallery-item {
+  transition: transform 250ms ease;
+}
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+.gallery-image {
+  width: 360px;
+  height: 200px;
+}
