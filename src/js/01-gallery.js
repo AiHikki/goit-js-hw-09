@@ -87,4 +87,11 @@ container.innerHTML = images.reduce(
   ''
 );
 
-let gallery = new SimpleLightbox('.gallery a', { captionDelay: 250 });
+let gallery = new SimpleLightbox('.gallery a', {
+  captionDelay: 250,
+  captionPosition: 'outside',
+});
+
+gallery.on('show.simplelightbox', function () {
+  console.log('hikki');
+});
