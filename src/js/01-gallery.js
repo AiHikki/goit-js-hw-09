@@ -1,11 +1,5 @@
-// Описаний в документації
-import simpleLightbox from 'simplelightbox';
 import SimpleLightbox from 'simplelightbox';
-// Додатковий імпорт стилів
 import 'simplelightbox/dist/simple-lightbox.min.css';
-
-// let gallery = new SimpleLightbox('.gallery a', { captionDelay: 250 });
-// gallery.on('show.simplelightbox', {});
 
 const images = [
   {
@@ -83,6 +77,7 @@ container.innerHTML = images.reduce(
   <a class="gallery-link" href="${original}">
     <img
     class="gallery-image"
+    title="${description}"
     src="${preview}"
     alt="${description}"
     />
@@ -92,6 +87,4 @@ container.innerHTML = images.reduce(
   ''
 );
 
-container.addEventListener('click', event => {
-  event.preventDefault();
-});
+let gallery = new SimpleLightbox('.gallery a', { captionDelay: 250 });
