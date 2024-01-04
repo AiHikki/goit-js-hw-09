@@ -1,24 +1,24 @@
-* {
-  box-sizing: border-box;
+body {
+  background-color: #09103f;
 }
-
-ul {
-  list-style-type: none;
-}
-img {
-  display: block;
+a {
+  color: #fff;
 }
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
   gap: 24px;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
 }
+
 .gallery-item {
   transition: transform 250ms ease;
 }
 .gallery-item:hover {
-  transform: scale(1.05);
+  transform: scale(0.95);
 }
 .gallery-image {
   width: 360px;
